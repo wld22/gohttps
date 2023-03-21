@@ -88,5 +88,5 @@ func main() {
     http.HandleFunc(healthzPath, healthz)
     http.HandleFunc(defaultPath, handleDefault)
 
-    log.Fatal(http.ListenAndServeTLS(":8888", certFile, privateKey, nil))
+    log.Fatal(http.ListenAndServeTLS(defaultPort, certFile, privateKey, nil))
 }
